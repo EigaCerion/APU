@@ -52,8 +52,11 @@ Aplikasi POSYANDU berbasis web menggunakan **Laravel 12** dan **Livewire v3**, d
 
 ## 🔐 Login Default
 
-Email          | Password
-admin@demo.com | password
+
+
+|   Email      | Password |
+|--------------|----------|
+|admin@demo.com | password|
 
 note : Ganti data ini di seeder atau melalui database.
 
@@ -68,6 +71,19 @@ note : Ganti data ini di seeder atau melalui database.
 - MySQL
 
 ---
+
+## 🎯 Gaya Global Aplikasi
+| Komponen    | Desain & Gaya |
+|-------------|----------------|
+| Layout      | Sidebar kiri + Topbar (atau full-page responsive) |
+| Warna Utama | Biru kalem (`#2563EB` Tailwind) atau hijau soft untuk aksen |
+| Font        | Inter atau Nunito (Tailwind default) |
+| Komponen UI | Card-style, `rounded-xl`, `shadow`, spacing `p-4`, margin `mb-6`, gap `gap-4` |
+| Form        | Input full-width, `border-gray-300`, `focus:ring-blue-500`, label jelas |
+| Tombol      | Biru untuk aksi utama, merah untuk hapus, abu untuk batal |
+| Table       | Responsive dengan hover row dan font kecil tapi readable |
+| Icon        | Lucide Icons (misal: `lucide-pencil`, `lucide-trash`) jika mau tambah warna |
+
 
 ## 🤝 Kontribusi
 Pull Request dan saran sangat diterima. Jangan lupa untuk fork repo ini dan buat branch baru saat berkontribusi.

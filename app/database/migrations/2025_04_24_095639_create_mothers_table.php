@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('nik')->unique();
+            $table->date('birth_date')->nullable(); 
             $table->string('phone')->nullable();
             $table->text('address')->nullable();
             $table->timestamps();
@@ -29,3 +30,5 @@ return new class extends Migration
         Schema::dropIfExists('mothers');
     }
 };
+
+

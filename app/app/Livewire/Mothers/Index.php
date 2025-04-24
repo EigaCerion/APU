@@ -8,6 +8,7 @@ use Livewire\Component;
 class Index extends Component
 {
     public $search = '';
+    protected $updatesQueryString = ['search'];
 
     public function delete($id)
     {
@@ -16,7 +17,7 @@ class Index extends Component
 
     public function render()
     {
-        $mothers = Mother::where('name', 'like', '%' . $this->search . '%')->get();
+        $mothers = Mother::where('name', 'like', '%' . $this->search . '%')->paginate(10); // 10 adalah jumlah data per halaman
         return view('livewire.mothers.index', compact('mothers'));
     }
 }

@@ -9,7 +9,9 @@ class Mother extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'nik', 'phone', 'address'];
+    protected $fillable = [
+        'name', 'nik', 'birth_date', 'address', 'phone',
+    ];
 
     public function children()
     {
