@@ -28,6 +28,7 @@ Aplikasi POSYANDU berbasis web menggunakan **Laravel 12** dan **Livewire v3**, d
 3. **Copy file .env & generate app key**
    ```bash
    cp .env.example .env
+   ```
    ```bash
    php artisan key:generate
 4. **Atur database di .env contoh :**
