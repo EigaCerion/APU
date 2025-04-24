@@ -39,6 +39,8 @@ Aplikasi POSYANDU berbasis web menggunakan **Laravel 12** dan **Livewire v3**, d
 5. **Migrasi dan seed database**
    ```bash
     php artisan migrate
+    ```
+    ```bash
     php artisan db:seed
 5. **Jalankan server**
    ```bash
