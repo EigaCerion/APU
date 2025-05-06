@@ -22,6 +22,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role'
     ];
 
     /**
@@ -54,7 +55,21 @@ class User extends Authenticatable
     {
         return Str::of($this->name)
             ->explode(' ')
-            ->map(fn (string $name) => Str::of($name)->substr(0, 1))
+            ->map(fn(string $name) => Str::of($name)->substr(0, 1))
             ->implode('');
+    }
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
+
+    public function getRoleNameAttribute(): string
+    {
+        return match ($this->role) {
+            1 => __('Super Admin'),
+            2 => __('Orang Tua'),
+            default => __('Tidak diketahui'),
+        };
     }
 }

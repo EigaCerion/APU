@@ -11,8 +11,8 @@ use Livewire\Component;
 class Profile extends Component
 {
     public string $name = '';
-
     public string $email = '';
+    public string $role = '';
 
     /**
      * Mount the component.
@@ -21,6 +21,7 @@ class Profile extends Component
     {
         $this->name = Auth::user()->name;
         $this->email = Auth::user()->email;
+        $this->role = Auth::user()->role;
     }
 
     /**
